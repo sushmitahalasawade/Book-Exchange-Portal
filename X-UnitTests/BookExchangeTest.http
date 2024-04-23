@@ -1,0 +1,136 @@
+
+### Sample Test: register user
+POST http://localhost:4000/users/signup
+Content-Type: application/json
+
+{
+  "name": "Sushmita Prafull Halasawade",
+  "email": "shalasaw@asu.edu",
+  "password": "Password@1234",
+  "passwordConfirmation": "Password@1234"
+}
+
+### Sample Test: login user
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+  "email": "shalasaw@asu.edu",
+  "password": "Password@1234"
+}
+
+
+### Sample Test: Add a new book
+POST http://localhost:4000/books
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+{ "title": "The C Programming Language",
+ "author": "Brian W. Kernighan and Dennis M. Ritchie", 
+ "description": "Regarded as the definitive guide to the C programming language, offering concise and practical insights into programming with C",
+"exchangeType": "borrow",
+"owner": "65587bc59709ba508db64d4b",
+"status": "available" }
+
+
+### Sample Test: Add a new book
+POST http://localhost:4000/books
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+{ "title": "Programming Language Pragmatics",
+ "author": "Michael L. Scott", 
+ "description": "Explores the design and implementation of programming languages, emphasizing language pragmatics and concepts.",
+"exchangeType": "borrow",
+"owner": "65587bc59709ba508db64d4b",
+"status": "available" }
+
+
+### Sample Test: Add a new book
+POST http://localhost:4000/books
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+{ "title": "Database Management Systems",
+ "author": "Raghu Ramakrishnan and Johannes Gehrkee", 
+ "description": "Offers a comprehensive understanding of database systems, their design, implementation, and query processing",
+"exchangeType": "trade",
+"owner": "65587bc59709ba508db64d4b",
+"status": "available" }
+
+
+### Sample Test: Add a new book
+POST http://localhost:4000/books
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+{ "title": "Deep Learning",
+ "author": "Ian Goodfellow", 
+ "description": "Explores deep learning concepts, architectures, and algorithms, providing a comprehensive guide to neural networks",
+"exchangeType": "trade",
+"owner": "65587bc59709ba508db64d4b",
+"status": "available" }
+
+
+### Sample Test: Add a new book
+POST http://localhost:4000/books
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+{ "title": "Operating System Concepts",
+ "author": "Abraham Silberschatz, Peter B. Galvin, and Greg Gagne", 
+ "description": "Offers an in-depth understanding of operating systems, their design, functions, and key concepts.",
+"exchangeType": "borrow",
+"owner": "65587bc59709ba508db64d4b",
+"status": "available" }
+
+
+### Sample Test: Retrieve all books
+GET http://localhost:4000/books
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+
+
+
+### Sample Test: Fetch book by ID
+GET http://localhost:4000/books/6558822e9709ba508db64d57
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+
+### Sample Test: Modify a book by ID
+POST http://localhost:4000/books/update/6558822e9709ba508db64d57
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+
+{ "title": "Introduction to Database Management Systems" }
+
+
+### Sample Test: Modify a book by ID
+POST http://localhost:4000/books/update/655882319709ba508db64d5a
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+
+{ "title": "Introduction to Deep Learning" }
+
+### Sample Test: Modify a book by ID
+POST http://localhost:4000/books/delete/655882329709ba508db64d5d
+Content-Type: application/json
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+{ "exchangeType": "trade"}
+
+### Sample Test: Delete book by ID
+POST http://localhost:4000/books/delete/6558822e9709ba508db64d57
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+
+### Sample Test: Delete book by ID
+POST http://localhost:4000/books/delete/655882319709ba508db64d5a
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
+
+
+### Sample Test: Delete book by ID
+POST http://localhost:4000/books/delete/655882329709ba508db64d5d
+Cookie: jwt={eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTg3YmM1OTcwOWJhNTA4ZGI2NGQ0YiIsImlhdCI6MTcwMDMzODY2MCwiZXhwIjoxNzAxMjAyNjYwfQ.WceXRkymI058J-f1BwcsP8YQCd5wOxAoZlTLF5j4zGA}
